@@ -50,7 +50,6 @@ $(function() {
 
 	// execute the below code only where we have this table
 	if ($table.length) {
-		// console.log('Inside the table!');
 
 		var jsonUrl = '';
 		if (window.categoryId == '') {
@@ -91,7 +90,7 @@ $(function() {
 							{
 								data : 'unitPrice',
 								mRender : function(data, type, row) {
-									return '&#8377; ' + data
+									return '&#8358; ' + data
 								}
 							},
 							{

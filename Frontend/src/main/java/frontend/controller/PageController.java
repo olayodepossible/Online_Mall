@@ -42,7 +42,7 @@ public class PageController {
         logger.debug("Inside PageController index method - DEBUG");
 
         //passing the list of categories
-//        mv.addObject("categories", categoryDAO.categories());
+        mv.addObject("categories", categoryDAO.categories());
 
 
         if(logout!=null) {
@@ -106,12 +106,7 @@ public class PageController {
         return mv;
     }
 
-
-
-            /*
-             Viewing a single product
-             */
-
+            /* Viewing a single product */
     @RequestMapping(value = "/show/{id}/product")
     public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
 
