@@ -91,6 +91,7 @@ public class ManagementController {
             }
         }
 
+        //check for any error
         if(results.hasErrors()) {
             model.addAttribute("message", "Validation fails for adding the product!");
             model.addAttribute("userClickManageProduct",true);
