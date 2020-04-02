@@ -11,9 +11,10 @@ import java.net.URL;
 
 public class FileUtil {
 
-    private static final String ABS_PATH = "E:/JAVAApp/online-shopping/onlineshopping/src/main/webapp/assets/images/";
+    private static final String ABS_PATH = "D:\\Users\\olatomi\\Documents\\JAVA\\SpringProjects\\E-Shopping\\Frontend\\src\\main\\webapp\\static\\images\\";
     private static String REAL_PATH = null;
     private static final Logger logger = LoggerFactory.getLogger(FileUtil.class);
+
     public static boolean uploadFile(HttpServletRequest request, MultipartFile file, String code)
     {
         // get the real server path

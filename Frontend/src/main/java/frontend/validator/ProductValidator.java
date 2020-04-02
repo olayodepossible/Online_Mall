@@ -1,6 +1,5 @@
 package frontend.validator;
 
-
 import backend.model.Product;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

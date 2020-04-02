@@ -71,14 +71,18 @@
 
                     <c:when test="${product.quantity < 1}">
 
-                        <a href="javascript:void(0)" class="btn btn-success disabled"><strike>
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</strike></a>
+                        <a href="javascript:void(0)" class="btn btn-success disabled">
+                            <strike>
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                            </strike>
+                        </a>
 
                     </c:when>
                     <c:otherwise>
 
                         <a href="${contextRoot}/cart/add/${product.id}/product" class="btn btn-success">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+                        </a>
 
                     </c:otherwise>
 
@@ -88,13 +92,13 @@
 
             <security:authorize access="hasAuthority('ADMIN')">
                 <a href="${contextRoot}/manage/${product.id}/product" class="btn btn-success">
-                    <span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                    <span class="glyphicon glyphicon-pencil"></span> Edit
+                </a>
             </security:authorize>
 
 
 
-            <a href="${contextRoot}/show/all/products" class="btn btn-warning">
-                Continue Shopping</a>
+            <a href="${contextRoot}/show/all/products" class="btn btn-warning"> Continue Shopping </a>
 
         </div>
 
