@@ -93,7 +93,7 @@
 
 
 
-            <a href="${contextRoot}/show/all/products" class="btn btn-secondary">
+            <a href="${contextRoot}/show/all/products" class="btn btn-warning">
                 Continue Shopping</a>
 
         </div>
