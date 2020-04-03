@@ -163,10 +163,8 @@
 
     <div class="row">
 
-
         <div class='col-xs-12'>
-
-
+            <%--Table for Admin --%>
             <table id="productsTable" class="table table-condensed table-bordered">
 
                 <thead>

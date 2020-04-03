@@ -25,9 +25,11 @@ public class RegisterHandler {
     public RegisterModel init() {
         return new RegisterModel();
     }
+
     public void addUser(RegisterModel registerModel, User user) {
         registerModel.setUser(user);
     }
+
     public void addBilling(RegisterModel registerModel, Address billing) {
         registerModel.setBilling(billing);
     }
@@ -67,6 +69,7 @@ public class RegisterHandler {
         billing.setUserId(user.getId());
         billing.setBilling(true);
         userDAO.addAddress(billing);
+
         return transitionValue ;
     }
 }
