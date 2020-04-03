@@ -150,8 +150,7 @@ $(function() {
 	
 	// list of all products for admin
 	var $productsTable = $('#productsTable');
-	
-	
+
 	if($productsTable.length) {
 		
 		var jsonUrl = window.contextRoot + '/json/data/admin/all/products';

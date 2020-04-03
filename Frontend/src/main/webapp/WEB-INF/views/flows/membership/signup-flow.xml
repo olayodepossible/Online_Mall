@@ -5,8 +5,8 @@
                           http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 
-    <var name="user" class="User"/>
-    <var name="billing" class="Address"/>
+    <var name="user" class="backend.model.User"/>
+    <var name="billing" class="backend.model.Address"/>
 
     <on-start>
         <evaluate expression="registerHandler.init()" result="flowScope.registerModel"/>
@@ -22,7 +22,7 @@
 
     <!-- validate signup-personal page-->
     <action-state id="validate">
-        <evaluate expression="registerHandler.validateUser(user,messageContext)" />
+        <evaluate expression="registerHandler.validateUser(user, messageContext)" />
         <transition on="success" to="billing"/>
         <transition on="failure" to="personal"/>
     </action-state>
@@ -37,7 +37,7 @@
     </view-state>
 
     <!-- view the signup-confirm page -->
-    <view-state id="confirm" view="flows/membership/signup-confirm" model="flowScope.registerModel">
+    <view-state id="confirm" view="flows/membership/signup-confirmation" model="flowScope.registerModel">
         <transition on="submit" to="submit" />
         <transition on="billing" to="billing" />
         <transition on="personal" to="personal" />
