@@ -20,7 +20,7 @@ public class HibernateConfig implements WebMvcConfigurer {
 
         private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/mallTable?createDatabaseIfNotExist=true&useSSL=false";
         private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-        private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
+        private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
         private final static String DATABASE_USERNAME = "root";
         private final static String DATABASE_PASSWORD = "possible_5344";
         private final static String DATABASE_INIT = "true";
@@ -78,8 +78,7 @@ public class HibernateConfig implements WebMvcConfigurer {
 
     @Bean
     public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory){
-        HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
-        return transactionManager;
+        return new HibernateTransactionManager(sessionFactory);
     }
 
 

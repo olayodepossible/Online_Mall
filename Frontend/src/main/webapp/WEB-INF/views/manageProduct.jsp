@@ -164,37 +164,44 @@
     <div class="row">
 
         <div class='col-xs-12'>
-            <%--Table for Admin --%>
-            <table id="productsTable" class="table table-condensed table-bordered">
+            <div class="container-fluid">
+                <div class="table-responsive">
 
-                <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>&#160;</th>
-                    <th>Name</th>
-                    <th>Brand</th>
-                    <th>Qty. Avail</th>
-                    <th>Unit Price</th>
-                    <th>Activate</th>
-                    <th>Edit</th>
-                </tr>
-                </thead>
+                    <%--Table for Admin --%>
+                    <table id="productsTable" class="table table-condensed table-bordered">
 
-                <tfoot>
-                <tr>
-                    <th>Id</th>
-                    <th>&#160;</th>
-                    <th>Name</th>
-                    <th>Brand</th>
-                    <th>Qty. Avail</th>
-                    <th>Unit Price</th>
-                    <th>Activate</th>
-                    <th>Edit</th>
-                </tr>
-                </tfoot>
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>&#160;</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Qty. Avail</th>
+                            <th>Unit Price</th>
+                            <th>Activate</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+
+                        <tfoot>
+                        <tr>
+                            <th>Id</th>
+                            <th>&#160;</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Qty. Avail</th>
+                            <th>Unit Price</th>
+                            <th>Activate</th>
+                            <th>Edit</th>
+                        </tr>
+                        </tfoot>
 
 
-            </table>
+                    </table>
+
+                </div>
+            </div>
+
 
 
         </div>

@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "order_detail")
+@Table(name = "order_details")
 public class OrderDetail implements Serializable {
 
     /**
@@ -21,7 +21,7 @@ public class OrderDetail implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
     @Column(name = "order_total")
-    private double orderTotal;
+    private double totalOrder;
     @ManyToOne
     private Address shipping;
     @ManyToOne
@@ -60,10 +60,10 @@ public class OrderDetail implements Serializable {
         this.id = id;
     }
     public double getOrderTotal() {
-        return orderTotal;
+        return totalOrder;
     }
     public void setOrderTotal(double orderTotal) {
-        this.orderTotal = orderTotal;
+        this.totalOrder = orderTotal;
     }
     public Address getShipping() {
         return shipping;

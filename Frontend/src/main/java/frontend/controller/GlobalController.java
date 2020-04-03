@@ -27,6 +27,7 @@ public class GlobalController {
 
     @ModelAttribute("userModel")
     public UserModel getUserModel() {
+
         if(session.getAttribute("userModel")==null) {
             // get the authentication object
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
