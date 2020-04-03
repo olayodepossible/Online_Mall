@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "order_item")
+@Table(name = "order_items")
 public class OrderItem implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -35,7 +35,7 @@ public class OrderItem implements Serializable {
     @Column (name = "product_count")
     private int productCount;
 
-    private double total;
+    private double totalItem;
 
 
     public int getId() {
@@ -72,11 +72,11 @@ public class OrderItem implements Serializable {
     }
 
     public double getTotal() {
-        return total;
+        return totalItem;
     }
 
     public void setTotal(double total) {
-        this.total = total;
+        this.totalItem = total;
     }
 
 }

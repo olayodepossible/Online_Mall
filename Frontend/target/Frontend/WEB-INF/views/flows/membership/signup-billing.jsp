@@ -22,7 +22,6 @@
                             id="billingForm"
                     >
 
-
                         <div class="form-group">
                             <label class="control-label col-md-4" for="addressLineOne">Address Line One</label>
                             <div class="col-md-8">

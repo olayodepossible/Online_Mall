@@ -145,7 +145,7 @@ public class PageController {
     @RequestMapping(value="/login")
     public ModelAndView login(@RequestParam(name="error", required = false)	String error,
                               @RequestParam(name="logout", required = false) String logout) {
-        System.out.println(">>>>>>>>>>>>>>>> I AM HERE");
+
         ModelAndView mv= new ModelAndView("login");
         mv.addObject("title", "Login");
         if(error!=null) {
@@ -154,7 +154,6 @@ public class PageController {
         if(logout!=null) {
             mv.addObject("logout", "You have logged out successfully!");
         }
-        System.out.println(">>>>>>>>>>>>>OUT HERE");
         return mv;
     }
 
@@ -174,7 +173,7 @@ public class PageController {
     @RequestMapping(value="/access-denied")
     public ModelAndView accessDenied() {
         ModelAndView mv = new ModelAndView("error");
-        mv.addObject("errorTitle", "Aha! Caught You.");
+        mv.addObject("errorTitle", "Trespassed!!!");
         mv.addObject("errorDescription", "You are not authorized to view this page!");
         mv.addObject("title", "403 Access Denied");
         return mv;

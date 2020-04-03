@@ -16,7 +16,6 @@
 
     <!--This will help to Scan all annotation in this module-->
     <context:component-scan base-package="frontend"/>
-    <context:component-scan base-package="backend"/>
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">

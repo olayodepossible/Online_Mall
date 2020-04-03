@@ -14,7 +14,7 @@ $(function() {
 	if((token!=undefined && header !=undefined) && (token.length > 0 && header.length > 0)) {		
 		// set the token header for the ajax request
 		$(document).ajaxSend(function(e, xhr, options) {			
-			xhr.setRequestHeader(header,token);			
+			xhr.setRequestHeader(header, token);
 		});				
 	}
 
