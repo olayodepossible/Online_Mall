@@ -154,4 +154,4 @@ pageEncoding="ISO-8859-1"%>
                 <a href="${contextRoot}/show/all/products" class="btn btn-lg btn-warning">Continue Shopping</a>
             </div>
         </div>
-        <%@include file="../../flows-shared/footer.jsp" %>
+        <%@include file="../flows-shared/footer.jsp" %>

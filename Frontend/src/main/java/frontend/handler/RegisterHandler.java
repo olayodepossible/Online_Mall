@@ -68,7 +68,7 @@ public class RegisterHandler {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         // save the user
-        userDAO.add(user);
+        userDAO.addUser(user);
 
         // save the billing address
         Address billing = registerModel.getBilling();

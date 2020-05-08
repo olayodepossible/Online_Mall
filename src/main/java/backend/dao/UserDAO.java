@@ -12,7 +12,7 @@ public interface UserDAO {
     User getByEmail(String email);
     User getById(int id);
 
-    boolean add(User user);
+    boolean addUser(User user);
 
     // adding and updating a new address
     Address getAddress(int addressId);

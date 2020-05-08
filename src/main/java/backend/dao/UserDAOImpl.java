@@ -34,7 +34,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean add(User user) {
+    public boolean addUser(User user) {
         try {
             sessionFactory.getCurrentSession().persist(user);
             return true;

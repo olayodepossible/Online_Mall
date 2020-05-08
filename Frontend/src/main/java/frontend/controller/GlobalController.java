@@ -13,8 +13,6 @@ import javax.servlet.http.HttpSession;
 
 @ControllerAdvice
 public class GlobalController {
-
-
     @Autowired
     private UserDAO userDAO;
 
@@ -28,7 +26,7 @@ public class GlobalController {
     @ModelAttribute("userModel")
     public UserModel getUserModel() {
 
-        if(session.getAttribute("userModel")==null) {
+        if(session.getAttribute("userModel")==  null) {
             // get the authentication object
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 

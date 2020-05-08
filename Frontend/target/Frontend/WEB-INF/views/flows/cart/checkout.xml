@@ -5,14 +5,14 @@
                           http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 
-    <var name="shipping" class="Address"/>
+    <var name="shipping" class="backend.model.Address"/>
 
     <on-start>
         <evaluate expression="checkoutHandler.init(currentUser.name)" result="flowScope.checkoutModel"/>
     </on-start>
 
     <!-- view the address selection page-->
-    <view-state id="shipping" view="flows/cart/checkout/order-address" model="shipping">
+    <view-state id="shipping" view="flows/cart/order-address" model="shipping">
         <on-entry>
             <evaluate expression="checkoutHandler.getShippingAddresses(flowScope.checkoutModel)" result="viewScope.addresses"/>
         </on-entry>
@@ -34,7 +34,7 @@
     </action-state>
 
     <!-- view the payment mode page-->
-    <view-state id="payment" view="flows/cart/checkout/order-payment" model="flowScope.checkoutModel">
+    <view-state id="payment" view="flows/cart/order-payment" model="flowScope.checkoutModel">
         <transition on="pay" to="saveOrder" />
     </view-state>
 
@@ -45,13 +45,13 @@
     </action-state>
 
     <!-- end state -->
-    <end-state id="receipt" view="flows/cart/checkout/order-confirm">
+    <end-state id="receipt" view="flows/cart/order-confirm">
         <on-entry>
             <evaluate expression="checkoutHandler.getOrderDetail(flowScope.checkoutModel)" result="requestScope.orderDetail"/>
         </on-entry>
     </end-state>
 
-    <end-state id="home" view="externalRedirect:contextRelative:/home" />
+    <end-state id="home" view="externalRedirect:contextRelative:"/>
     <end-state id="error" view="flows/flows-shared/error" />
 
     <!-- global transition -->
