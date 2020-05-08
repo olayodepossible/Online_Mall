@@ -5,7 +5,10 @@ import backend.dao.CategoryDAO;
 import backend.dao.ProductDAO;
 import backend.model.Category;
 import backend.model.Product;
+import backend.model.User;
+import backend.model.UserLogin;
 import frontend.exception.ProductNotFoundException;
+import frontend.model.UserModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +32,9 @@ public class PageController {
 
     @Autowired
     private ProductDAO productDAO;
+
+    @Autowired
+    private GlobalController globalController;
 
     @RequestMapping(value = { "/home", "/page"})
     public ModelAndView index(@RequestParam(name="logout",required=false)String logout) {
@@ -136,26 +140,33 @@ public class PageController {
     public ModelAndView register() {
         ModelAndView mv= new ModelAndView("page");
 
-        logger.info("Page Controller membership called!");
-
         return mv;
     }
 
 
+
     @RequestMapping(value="/login")
-    public ModelAndView login(@RequestParam(name="error", required = false)	String error,
-                              @RequestParam(name="logout", required = false) String logout) {
+    public ModelAndView login(@RequestParam(name="error", required = false)	String error, @RequestParam(name="logout", required = false) String logout) {
 
         ModelAndView mv= new ModelAndView("login");
         mv.addObject("title", "Login");
+
         if(error!=null) {
             mv.addObject("message", "Username and Password is invalid!");
         }
         if(logout!=null) {
             mv.addObject("logout", "You have logged out successfully!");
         }
+
         return mv;
     }
+
+
+    /*@RequestMapping(value="/userProfile", method = RequestMethod.POST)
+    public String userProfile(HttpServletRequest request, HttpServletResponse response) {
+
+        return "redirect:login";
+    }*/
 
     @RequestMapping(value="/logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {

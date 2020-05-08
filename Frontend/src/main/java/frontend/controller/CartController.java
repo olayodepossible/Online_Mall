@@ -22,7 +22,7 @@ public class CartController {
     @RequestMapping("/show")
     public ModelAndView showCart(@RequestParam(name = "result", required = false) String result) {
 
-        ModelAndView mv = new ModelAndView("index");
+        ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "Shopping Cart");
         mv.addObject("userClickShowCart", true);
 

@@ -2,6 +2,8 @@
          pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
@@ -92,7 +94,7 @@
                         </div>
 
                         <div class="panel-body">
-                            <form action="${contextRoot}/login" method="POST" class="form-horizontal"
+                            <form action="${contextRoot}/login" method="POST" class="form-horizontal" modelattribute="userLogin"
                                   id="loginForm"
                             >
                                 <div class="form-group">
@@ -135,7 +137,7 @@
 
 
     <!-- Footer comes here -->
-    <%@include file="./shared/footer.jsp"%>
+    <%@include file="shared/footer.jsp"%>
 
     <!-- jQuery -->
     <script src="${js}/jquery.js"></script>

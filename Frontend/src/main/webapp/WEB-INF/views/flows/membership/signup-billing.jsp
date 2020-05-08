@@ -82,8 +82,9 @@
                                 <button type="submit" name="_eventId_personal" class="btn btn-primary">
                                     <span class="glyphicon glyphicon-chevron-left"></span> Back - Personal
                                 </button>
+
                                 <button type="submit" name="_eventId_confirm" class="btn btn-primary">
-                                    Next - Confirm<span class="glyphicon glyphicon-chevron-right"></span>
+                                    Next<span class="glyphicon glyphicon-chevron-right"></span>
                                 </button>
                             </div>
                         </div>
