@@ -22,7 +22,7 @@ public class HibernateConfig implements WebMvcConfigurer {
         private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
         private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
         private final static String DATABASE_USERNAME = "root";
-        private final static String DATABASE_PASSWORD = "possible_5344";
+        private final static String DATABASE_PASSWORD = "password";
         private final static String DATABASE_INIT = "true";
 
 
